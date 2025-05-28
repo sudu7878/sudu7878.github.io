@@ -1,0 +1,75 @@
+/* Reset some default padding/margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000066; /* That deep Win95 blue */
+  color: #fffbe0; /* Pale yellow-ish retro text */
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+}
+
+.logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fffbe0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fffbe0;
+  font-size: 1.2em;
+  position: relative;
+}
+
+nav a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fffbe0;
+  margin-top: 5px;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 auto 30px auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1em;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.note {
+  font-size: 0.85em;
+  color: #bfbfbf;
+  line-height: 1.4;
+}
