@@ -1,0 +1,145 @@
+/* Reset some default padding/margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0061; /* That deep Win95 blue */
+  color: #fffbe0; /* Pale yellow-ish retro text */
+  font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+}
+
+.logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fffbe0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fffbe0;
+  font-size: 1.2em;
+  position: relative;
+}
+
+nav a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fffbe0;
+  margin-top: 5px;
+}
+
+.desc {
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.AppInfoThing {
+  
+  padding-top: 5%;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 auto 30px auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1em;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.note {
+  font-size: 0.85em;
+  color: #bfbfbf;
+  line-height: 1.4;
+}
+
+
+.icon-grid {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+}
+
+.icon img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.icon:hover img {
+  transform: scale(1.1);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background-color: #028686;
+  padding: 12px;
+  border-radius: 10px;
+  color: rgb(250, 233, 176);
+  font-size: 1.25rem;
+  width: 180px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.tooltip span {
+  padding-top: 12px;
+  font-size: 0.9rem;
+}
+
+.icon:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.footer-msg {
+  margin-top: 60px;
+  font-size: 1.1rem;
+}
