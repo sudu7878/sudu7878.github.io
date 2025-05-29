@@ -5,9 +5,17 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'MS Sans Serif';
+  src: url('sudu7878.github.io\Fonts\ms-sans-serif-1.otf.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* GENERAL STYLES */
 body {
-  background-color: #000066; /* Deep Win95 blue */
+  background-color: #008080; /* Deep Win95 blue */
   color: #fffbe0; /* Soft retro yellow */
   font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
   text-align: center;

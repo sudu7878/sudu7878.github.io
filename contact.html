@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>sudu</title>
+  <link rel="stylesheet" href="Assets/CSS/contact.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">sudu</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="contact.html" class="active">Contact me</a></li>
+        </ul>
+</nav>
+
+  </header>
+
+ <main>
+    <section class="win95-dialogue">
+  <div class="title-bar">
+    <span>Contact Me</span>
+    
+  </div>
+  <div class="dialogue-body">
+    <p class="DboxTitle">tring tring *rings*</p>
+    <div class="dialogue-body-TextInside"></div>
+        <p class="DboxText">If you have any questions, suggestions, or just want to say hi, feel free to reach out!</p>
+    </div>
+    <div class="button-group">
+       <button onclick="copyDiscord()">Copy Discord ID</button></li>
+       <button onclick="copyEmail()">Copy Email ID</button></li>
+         <button onclick="window.location.href='https://www.instagram.com/sudarshan.rbxl/'">Instagram</button>
+         <button onclick="window.location.href='https://www.youtube.com/@lookmyteeth483'">YouTube</button>
+         <button onclick="window.location.href='https://open.spotify.com/user/trsz2w6kgqpwg7sxjwruw3xwv'">Spotify</button>
+         <button onclick="window.location.href='https://www.roblox.com/users/2222777177/profile'">Roblox</button>
+         <button onclick="window.location.href='https://www.fiverr.com/s/YRgE5kz'">Fiverr</button>
+         <button onclick="window.location.href='https://steamcommunity.com/profiles/76561199434064166/'">Steam</button>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <script>
+    function copyDiscord() {
+      const discordID = "sudu_493412";
+      navigator.clipboard.writeText(discordID).then(() => {
+        alert("Discord username copied to clipboard!");
+      });
+    }
+
+    function copyEmail() {
+      const emailID = "sudarshanmohanchavan493412@gmail.com";
+      navigator.clipboard.writeText(emailID).then(() => {
+        alert("Email ID copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>

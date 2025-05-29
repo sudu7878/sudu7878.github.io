@@ -5,10 +5,17 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'MS Sans Serif';
+  src: url('Fonts\ms-sans-serif-1.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  background-color: #0f0061; /* That deep Win95 blue */
+  background-color: #008080; /* That deep Win95 blue */
   color: #fffbe0; /* Pale yellow-ish retro text */
-  font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
+  font-family: 'MS Sans Serif', sans-serif, sans-serif;
   text-align: center;
   padding: 40px 20px;
 }
