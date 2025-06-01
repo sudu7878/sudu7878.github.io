@@ -22,6 +22,10 @@ body {
   padding: 40px 20px;
   line-height: 1.6;
 }
+body {
+  cursor: url('/Assets/CSS/arrow.cur'), default;
+}
+
 
 /* HEADER + NAVIGATION */
 header {
