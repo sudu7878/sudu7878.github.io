@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #008080;
+  color: #fffbe0;
+  font-family: 'px_sans_nouveaux', sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+}
+
+.logo {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fffbe0;
+  font-size: 1.2em;
+  position: relative;
+}
+
+nav a.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fffbe0;
+  margin-top: 5px;
+}
+
+.projects-hero {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.projects-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.projects-hero p {
+  font-size: 1.2rem;
+  color: #fefdd7;
+  text-align: justify;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-icon {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.project-card p {
+  font-size: 1.05rem;
+  color: #111;
+  text-align: justify;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 0px #000;
+  border: 2px solid #000;
+  min-height: 400px; /* 💡 Keep all cards the same height */
+}
+
+.project-card .project-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 140px; /* 👈 Ensures same height for icon + title block */
+  justify-content: center;
+  text-align: center;
+}
+
+.project-card .project-bottom {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 0px #000;
+  border: 2px solid #000;
+  min-height: 400px; /* 💡 Keep all cards the same height */
+}
+
+.project-card .project-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 140px; /* 👈 Ensures same height for icon + title block */
+  justify-content: center;
+  text-align: center;
+}
+
+.project-card .project-bottom {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-group {
+  padding-right: 11px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: justify;
+  margin-top: 10px;
+  gap: 7px;
+}
+
+.button-group button {
+  padding: 2px 10px;
+  padding-top: 3px;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-bottom: 21px;
+  font-size: 17px;
+  background: #e0e0e0;
+  box-shadow: inset -5px -5px 0px #808080, inset 5px 5px 0px #fff;
+  cursor: pointer;
+}
+
+.button-title{
+  margin-bottom: auto;
+
+}
+
+.button-para{
+  text-align: middle;
+  padding-top: 19px;
+
+}
+
+.button-group button:active {
+  box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #fff;
+}
+
+.button-group button:active {
+  box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #fff;
+}
+
+.project-icon {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.button-content h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: black;
+}
+
+.button-content p {
+  font-size: 1rem;
+  margin: 0;
+  color: #222;
+}
+
