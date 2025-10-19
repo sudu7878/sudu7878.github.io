@@ -65,7 +65,7 @@ nav a.active::after {
 }
 
 .title-bar {
-  background: linear-gradient(to right, #000080, #1f1ff8);
+  background: linear-gradient(to right, #0a088bc4, #1f1ff8);
   color: white;
   padding: 2px 8px;
   font-size: 19px;
@@ -78,7 +78,7 @@ nav a.active::after {
 
 
 .dialogue-body {
-  padding: 19px;
+  padding: 22px;
   background-color: #c0c0c0;
   color: black;
 }
@@ -110,6 +110,7 @@ nav a.active::after {
 .button-group {
   padding-right: 11px;
   padding-bottom: 10px;
+  padding-left: 10px;
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;

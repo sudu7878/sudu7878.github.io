@@ -165,7 +165,26 @@ nav a.active::after {
   cursor: pointer;
 }
 
+.button-group-back button {
+  
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 6px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  background: #e0e0e0;
+  box-shadow: inset -5px -5px 0px #808080, inset 5px 5px 0px #fff;
+  cursor: pointer;
+}
+
+
 .button-title{
+  margin-bottom: auto;
+
+}
+
+
+.button-title-back{
   margin-bottom: auto;
 
 }
@@ -180,7 +199,7 @@ nav a.active::after {
   box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #fff;
 }
 
-.button-group button:active {
+.button-group-back button:active {
   box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #fff;
 }
 
@@ -195,7 +214,13 @@ nav a.active::after {
   color: black;
 }
 
-.button-content p {
+.button-content-back h3 {
+  font-size: 0rem;
+  margin: 0;
+  color: black;
+}
+
+.button-content-back p {
   font-size: 1rem;
   margin: 0;
   color: #222;
