@@ -1,0 +1,230 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #008080;
+      color: #fffbe0;
+       
+      font-family: 'px_sans_nouveaux', 'Arial', sans-serif; 
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+    }
+
+    .logo {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fffbe0;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    nav a.active::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #fffbe0;
+      margin-top: 5px;
+    }
+
+    .projects-hero {
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+    }
+
+    .projects-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .projects-hero h4 {
+      font-size: 1.2rem;
+      color: #fefdd7;
+      text-align: center;  
+    }
+    
+    .button-group-back {
+    
+      position: absolute;
+      top: 100px;
+      left: 40px;
+    }
+
+    .button-group-back button {
+      padding: 4px 6px 4px 4px;
+      font-size: 12px;
+      background: #c0c0c0;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #404040;
+      border-bottom: 2px solid #404040;
+      box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #000;
+    }
+
+    .button-group-back button:active {
+      border-top: 2px solid #404040;
+      border-left: 2px solid #404040;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      box-shadow: none;
+    }
+    
+    .button-group-back .button-title-back {
+      color: #000;
+      font-size: 14px;
+      font-family: 'px_sans_nouveaux', 'Arial', sans-serif;
+    }
+
+     
+    
+    .photo-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 50px; 
+      max-width: 950px;
+      margin: 40px auto;  
+    }
+
+   
+    .photo-window {
+      background-color: #c0c0c0;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #404040;
+      border-bottom: 2px solid #404040;
+      box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.4);
+      text-align: left;
+    }
+
+    .photo-window .title-bar {
+      background: linear-gradient(to right, #000080, #a0a0ff);
+      padding: 4px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 26px;
+    }
+    
+    .photo-window .title-bar-text {
+      color: white;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+      
+    .photo-window .window-body {
+      background-color: #c0c0c0;  
+      color: #eee;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+   
+    @media (min-width: 768px) {
+      .photo-window .window-body {
+        flex-direction: row;
+      }
+    }
+
+   
+    .photo-image {
+      flex: 3;
+      width: 100%;
+      border: 2px inset #404040;
+    }
+
+    .photo-image img {
+      display: block;
+      width: 100%;
+      height: auto; 
+    }
+
+  
+    .photo-details {
+      flex: 2; 
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .photo-details h3 {
+      font-size: 1.8rem;
+      color: #000000;  
+      margin-top: 0;
+      text-align: left;
+    }
+    
+    .photo-details p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #2c2c2c;
+      text-align: left;
+    }
+
+     
+    .settings-box {
+      background-color: #c0c0c0;
+      color: #000;
+      padding: 10px;
+      border-top: 2px solid #404040;
+      border-left: 2px solid #404040;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      position: relative;
+      margin-top: 15px;
+    }
+    
+     
+    .settings-box-title {
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      background-color: #c0c0c0;
+      padding: 0 5px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .settings-list {
+      list-style: none;
+      padding-top: 10px;  
+    }
+    
+    .settings-list li {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+    
+    .settings-list li strong {
+      display: inline-block;
+      width: 110px;
+    }
