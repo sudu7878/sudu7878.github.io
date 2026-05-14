@@ -166,16 +166,34 @@ nav a.active::after {
 
 
 .button-group-back button {
-  
-  padding-top: 4px;
-  padding-left: 4px;
-  padding-right: 6px;
-  padding-bottom: 4px;
-  font-size: 12px;
-  background: #e0e0e0;
-  box-shadow: inset -5px -5px 0px #808080, inset 5px 5px 0px #fff;
-  cursor: pointer;
-}
+      padding: 4px 6px 4px 4px;
+      font-size: 12px;
+      background: #c0c0c0;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #404040;
+      border-bottom: 2px solid #404040;
+      box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #000;
+    }
+
+    .button-group-back button:active {
+      border-top: 2px solid #404040;
+      border-left: 2px solid #404040;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      box-shadow: none;
+    }
+    
+    .button-group-back .button-title-back {
+      color: #000;
+      font-size: 14px;
+      font-family: 'px_sans_nouveaux', 'Arial', sans-serif;
+    }
 
 
 .sample-title{
@@ -183,11 +201,6 @@ nav a.active::after {
   font-size: 128px;
 }
 
-
-.button-title-back{
-  margin-bottom: auto;
-
-}
 
 .sample-para{
   text-align: middle;
@@ -199,9 +212,6 @@ nav a.active::after {
   box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #ffffff;
 }
 
-.button-group-back button:active {
-  box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #fff;
-}
 
 .project-icon {
   font-size: 2.5rem;
@@ -210,12 +220,6 @@ nav a.active::after {
 
 .sample-content h3 {
   font-size: 1.4rem;
-  margin: 0;
-  color: black;
-}
-
-.button-content-back h3 {
-  font-size: 0rem;
   margin: 0;
   color: black;
 }
