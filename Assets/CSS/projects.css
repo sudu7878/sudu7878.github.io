@@ -96,14 +96,14 @@ nav a.active::after {
   background-color: #fff;
   box-shadow: 2px 2px 0px #000;
   border: 2px solid #000;
-  min-height: 400px; /* 💡 Keep all cards the same height */
+  min-height: 400px; 
 }
 
 .project-card .project-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 140px; /* 👈 Ensures same height for icon + title block */
+  min-height: 140px; 
   justify-content: center;
   text-align: center;
 }
@@ -122,14 +122,14 @@ nav a.active::after {
   background-color: #fff;
   box-shadow: 2px 2px 0px #000;
   border: 2px solid #000;
-  min-height: 400px; /* 💡 Keep all cards the same height */
+  min-height: 400px; 
 }
 
 .project-card .project-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 140px; /* 👈 Ensures same height for icon + title block */
+  min-height: 140px;
   justify-content: center;
   text-align: center;
 }
@@ -158,8 +158,12 @@ nav a.active::after {
   padding-right: 19px;
   padding-bottom: 21px;
   font-size: 17px;
-  background: #e0e0e0;
-  box-shadow: inset -5px -5px 0px #808080, inset 5px 5px 0px #fff;
+  background: #c0c0c0;
+      border-top: 2px solid #ffffff;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #404040;
+      border-bottom: 2px solid #404040;
+      box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.4);
   cursor: pointer;
 }
 
@@ -175,12 +179,13 @@ nav a.active::after {
 }
 
 .button-group button:active {
-  box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #fff;
+  border-top: 2px solid #404040;
+      border-left: 2px solid #404040;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      box-shadow: none;
 }
 
-.button-group button:active {
-  box-shadow: inset 5px 5px 0px #808080, inset -5px -5px 0px #fff;
-}
 
 .project-icon {
   font-size: 2.5rem;
