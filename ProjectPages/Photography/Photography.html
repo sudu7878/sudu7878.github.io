@@ -6,7 +6,6 @@
   <title>Photography - sudu</title>
   <link rel="icon" type="image/x-icon" href="../../Assets/Images/stickman.jpg">
   <link rel="stylesheet" href="photo.css">
-
 </head>
 <body>
   <header>
@@ -22,340 +21,436 @@
   </header>
 
   <main>
-   
     <div class="button-group-back">
-      <button onclick="window.location.href='../../projects.html'">
-        <img src="../../Assets/Images/backicn.png" alt="Back" width="24px" height="24px">
-        
+      <button onclick="window.location.href='../../projects.html'" aria-label="Back to projects">
+        <img src="../../Assets/Images/backicn.png" alt="" width="24" height="24">
       </button>
     </div>
 
-    
     <section class="projects-hero">
-      
       <img src="../Photography/PhotoPageAssets/photo.png" alt="Camera Icon" class="avatar" width="258" height="256"/>
       <h2>Photography</h2>
       <h4>Photography is the world of stillness, where time freezes, and it can also give a powerful message. It's a different way of storytelling where you don't say anything or nothing moves. It's the art of stillness. Check out some of my works!</h4>
     </section>
 
-   
-    <section class="photo-gallery">
-
-    
-      <div class="photo-window">
+    <section class="photo-gallery" aria-label="Photography gallery">
+      <div class="photo-window explorer-window">
         <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\Path_to_Peace.jpg</span>
+          <span class="title-bar-text" id="windowTitle">C:\Sudu\Photos\Path_to_Peace.jpg</span>
         </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-         
-            <img src="../Photography/PhotoPageAssets/img.png" alt="Path to Peace">
-          </div>
-          
-          <div class="photo-details">
-            
-            <h3>Path to Peace</h3>
-            <p>
-              This is a shot from Mahalshej Ghat mountain range, during monsoon. The greenery, low light and wet-empty road all of 'em contribute to this beautiful scenery in itself. I wish I would have taken the shot at the center of the road, but its fine!
-            </p>
 
-           
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-               
-                <li><strong>Camera:</strong> Canon EOS 760D</li>
-                <li><strong>Aperture:</strong> f/4.5</li>
-                <li><strong>Shutter Speed:</strong> 1/125</li>
-                <li><strong>ISO:</strong> 100</li>
-              </ul>
+        <div class="toolbar" aria-label="Gallery controls">
+          <span class="toolbar-path">C:\Sudu\Photos</span>
+        </div>
+
+        <div class="explorer-body">
+          <aside class="folder-pane" aria-label="Photo folders">
+            <h3>Folders</h3>
+            <button class="folder-item active" type="button" data-filter="All">C:\Sudu\Photos</button>
+            <button class="folder-item" type="button" data-filter="Nature">Nature</button>
+            <button class="folder-item" type="button" data-filter="Golden Hour">Golden Hour</button>
+            <button class="folder-item" type="button" data-filter="Objects">Objects</button>
+            <button class="folder-item" type="button" data-filter="Experiments">Experiments</button>
+            <button class="folder-item" type="button" data-filter="Macro Photography">Macro Photography</button>
+          </aside>
+
+          <div class="thumbnail-pane">
+            <div class="thumbnail-grid" id="thumbnailGrid" aria-label="Photo thumbnails"></div>
+          </div>
+
+          <aside class="preview-pane" aria-live="polite">
+            <div class="preview-image-frame">
+              <img id="previewImage" src="../Photography/PhotoPageAssets/img.png" alt="Path to Peace">
             </div>
-          </div>
+            <div class="photo-details">
+              <h3 id="previewTitle">Path to Peace</h3>
+              <p id="previewDescription"></p>
 
+              <div class="settings-box">
+                <span class="settings-box-title">Camera Settings</span>
+                <ul class="settings-list" id="settingsList"></ul>
+              </div>
+
+              <button class="open-viewer-button" type="button" id="openViewerButton">Open Viewer</button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="status-bar">
+          <span id="statusCount">10 object(s)</span>
+          <span id="statusSelected">Path_to_Peace.jpg selected</span>
         </div>
       </div>
-      
-      
-      
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\Waterfall.jpg</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/IMG_3335.JPG" alt="Waterfall">
-          </div>
-          
-          <div class="photo-details">
-            <h3>Waterfall</h3>
-            <p>
-              This shot is also taken at Mahalshej Ghat mountain range during the monsoon, when almost all of the waterfall points are full. This is basically a long exposure shot of the same, it looks so good for some reason, its just peaceful.
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Canon EOS 750D</li>
-                <li><strong>Aperture:</strong> f/5.6</li>
-                <li><strong>Shutter Speed:</strong> 1/20</li>
-                <li><strong>ISO:</strong> 200</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\SunForest.jpg</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/Img2.png" alt="Waterfall">
-          </div>
-          
-          <div class="photo-details">
-            <h3>Sun Forest</h3>
-            <p>
-              This shot was actually taken in nearby woods, and man, the early morning sunlight, the lighting, dried leaves laying at the ground, large FOV, the sun and the banyan tree becoming the main subject, its all cinematic and looks so cool, and peaceful!
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Realme Narzo 70 Pro (Phone)</li>
-                <li><strong>Aperture:</strong> Auto</li>
-                <li><strong>Shutter Speed:</strong> Auto</li>
-                <li><strong>ISO:</strong> Auto</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\Sunset.jpg</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/img4.png" alt="Sunset">
-          </div>
-          
-          <div class="photo-details">
-            <h3>The Sunset</h3>
-            <p>
-              This shot was during the winters and with the cold breeze with farms and vegetation around. The atmosphere was just cool and calm, the dazzling sound of the high voltage power rails just made it 10x more ASMR-y, but the colors of the sky, the clouds, the tyndall effect, it just makes the scene so calm to look at.
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Canon EOS 750D</li>
-                <li><strong>Aperture:</strong> f/11</li>
-                <li><strong>Shutter Speed:</strong> 1/160</li>
-                <li><strong>ISO:</strong> 200</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\LollyJolly.jpg</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/img5.png" alt="LollyJolly">
-          </div>
-          
-          <div class="photo-details">
-            <h3>Lolly-Jolly</h3>
-            <p>
-              This shot is of chocolate lollypop my mom made for my birthday a few years ago! The goal here was to capture a cinematic angle of the object. So I used low aperture to get that focal effect. I also used 35mm lens for this shot.
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Canon EOS R</li>
-                <li><strong>Aperture:</strong> f/1.8</li>
-                <li><strong>Shutter Speed:</strong> 1/125</li>
-                <li><strong>ISO:</strong> 200</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\ThePot.jpg</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/img6.jpg" alt="Pot">
-          </div>
-          
-          <div class="photo-details">
-            <h3>The Pot</h3>
-            <p>
-              This was the pic captured during the golden hour from my balcony. The goal here was to emphasize the texture of the plastic pot. Note that this image has been processed in Darktable in which I gave some filmic grain and a slight green tint. I think it works nicely.
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Canon EOS 760D</li>
-                <li><strong>Aperture:</strong> f/8.4</li>
-                <li><strong>Shutter Speed:</strong> 1/60</li>
-                <li><strong>ISO:</strong> 400</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\SolarFlare</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/img7.jpg" alt="Solar Flare">
-          </div>
-          
-          <div class="photo-details">
-            <h3>Solar Flare</h3>
-            <p>
-              This shot almost looks like it was taken from space! However, what I did was to take a paper cup, taped it black, punched a small hole in the front, put my camera lens inside the other end, and pointed it towards the sun (evening sun, or else it woulve burned my sensor LOL). Then i got those really awesome sun bloom due to the aperture shape, and some sick lens flares! 
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Canon EOS 760D</li>
-                <li><strong>Aperture:</strong> f/6</li>
-                <li><strong>Shutter Speed:</strong> 1/30</li>
-                <li><strong>ISO:</strong> 400</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\LensMagic.jpg</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/1.jpg" alt="LensMagic">
-          </div>
-          
-          <div class="photo-details">
-            <h3>Lens Magic</h3>
-            <p>
-              This is a shot of a telephoto lens which is mountable for Canon R. Shined a nice white light to see the anti-glare reflective coating. Can also see various lens stages. I think this is an awesome shot depicting serious optical engineering.
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Realme Narzo 70 Pro (Phone)</li>
-                <li><strong>Aperture:</strong> Auto</li>
-                <li><strong>Shutter Speed:</strong> Auto</li>
-                <li><strong>ISO:</strong> Auto</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\LeafyLeafy.jpg</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/img8.jpg" alt="LeafyLeafy">
-          </div>
-          
-          <div class="photo-details">
-            <h3>Leafy Leafy</h3>
-            <p>
-              Took this shot during the golden hour when the sun is directly in front of the leaf. There was this nice hole through which the sunlight could pass. I was testing the dynamic range performance of my EOS 760D. Must say, it performed quite well considering its sensor size. The leaf veins are visible which makes them look so magical for some reason. I think this is a nice shot overall. The increased FOV and the lowered angle gives that "cinematic power" look to the sun.
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Canon EOS 760D</li>
-                <li><strong>Aperture:</strong> f/8.6</li>
-                <li><strong>Shutter Speed:</strong> 1/40</li>
-                <li><strong>ISO:</strong> 100</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="photo-window">
-        <div class="title-bar">
-          <span class="title-bar-text">C:\Sudu\Photos\PostApocalypse</span>
-        </div>
-        <div class="window-body">
-          
-          <div class="photo-image">
-          
-            <img src="../Photography/PhotoPageAssets/img9.jpg" alt="??">
-          </div>
-          
-          <div class="photo-details">
-            <h3>Post Apocalypse</h3>
-            <p>
-              This shot doesn't have any meaning, and is rather just for testing the performance of my EOS 760D. While its not a monster cinema camera or something, it still has got a lot of power! On an artisitc side, this creates nice silhouette elements. Plus, it almost gives out some post-apocalyptic-cinematic feel. On the technical side, notice how the highlights roll off almost like butter. The sun, instead of just clipping to white, has that gentle gradient around it. The wires around are also almost visible elevating the mood of the scene. By the way, this was also taken during the golden hour. (also had to take care that the exposure time and aperture were as small as possibe, or rip sensor.)
-            </p>
-
-            <div class="settings-box">
-              <span class="settings-box-title">Camera Settings</span>
-              <ul class="settings-list">
-                <li><strong>Camera:</strong> Canon EOS 760D)</li>
-                <li><strong>Aperture:</strong> f/10</li>
-                <li><strong>Shutter Speed:</strong> 1/2500</li>
-                <li><strong>ISO:</strong> 100</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
     </section>
-
+    <br>
+    <br>
+    <h6>Note: Parts of this page has been generated by AI.</h6>
   </main>
+
+  <div class="viewer-overlay" id="viewerOverlay" hidden>
+    <div class="photo-window viewer-window" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+      <div class="title-bar">
+        <span class="title-bar-text" id="viewerTitle">C:\Sudu\Photos\Path_to_Peace.jpg</span>
+        <button class="close-viewer-button" type="button" id="closeViewerButton" aria-label="Close viewer">x</button>
+      </div>
+      <div class="viewer-body">
+        <img id="viewerImage" src="../Photography/PhotoPageAssets/img.png" alt="Path to Peace">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const photos = [
+      {
+        title: "Path to Peace",
+        file: "Path_to_Peace.jpg",
+        category: "Nature",
+        src: "../Photography/PhotoPageAssets/img.png",
+        alt: "Path to Peace",
+        description: "This is a shot from Mahalshej Ghat mountain range, during monsoon. The greenery, low light and wet-empty road all of 'em contribute to this beautiful scenery in itself. I wish I would have taken the shot at the center of the road, but its fine!",
+        settings: {
+          Camera: "Canon EOS 760D",
+          Aperture: "f/4.5",
+          "Shutter Speed": "1/125",
+          ISO: "100"
+        }
+      },
+      {
+        title: "Waterfall",
+        file: "Waterfall.jpg",
+        category: "Nature",
+        src: "../Photography/PhotoPageAssets/IMG_3335.JPG",
+        alt: "Waterfall",
+        description: "This shot is also taken at Mahalshej Ghat mountain range during the monsoon, when almost all of the waterfall points are full. This is basically a long exposure shot of the same, it looks so good for some reason, its just peaceful.",
+        settings: {
+          Camera: "Canon EOS 750D",
+          Aperture: "f/5.6",
+          "Shutter Speed": "1/20",
+          ISO: "200"
+        }
+      },
+      {
+        title: "Sun Forest",
+        file: "SunForest.jpg",
+        category: "Nature",
+        src: "../Photography/PhotoPageAssets/Img2.png",
+        alt: "Sun Forest",
+        description: "This shot was actually taken in nearby woods, and man, the early morning sunlight, the lighting, dried leaves laying at the ground, large FOV, the sun and the banyan tree becoming the main subject, its all cinematic and looks so cool, and peaceful!",
+        settings: {
+          Camera: "Realme Narzo 70 Pro (Phone)",
+          Aperture: "Auto",
+          "Shutter Speed": "Auto",
+          ISO: "Auto"
+        }
+      },
+      {
+        title: "The Sunset",
+        file: "Sunset.jpg",
+        category: "Golden Hour",
+        src: "../Photography/PhotoPageAssets/img4.png",
+        alt: "Sunset",
+        description: "This shot was during the winters and with the cold breeze with farms and vegetation around. The atmosphere was just cool and calm, the dazzling sound of the high voltage power rails just made it 10x more ASMR-y, but the colors of the sky, the clouds, the tyndall effect, it just makes the scene so calm to look at.",
+        settings: {
+          Camera: "Canon EOS 750D",
+          Aperture: "f/11",
+          "Shutter Speed": "1/160",
+          ISO: "200"
+        }
+      },
+      {
+        title: "Lolly-Jolly",
+        file: "LollyJolly.jpg",
+        category: "Objects",
+        src: "../Photography/PhotoPageAssets/img5.png",
+        alt: "Lolly-Jolly",
+        description: "This shot is of chocolate lollypop my mom made for my birthday a few years ago! The goal here was to capture a cinematic angle of the object. So I used low aperture to get that focal effect. I also used 35mm lens for this shot.",
+        settings: {
+          Camera: "Canon EOS R",
+          Aperture: "f/1.8",
+          "Shutter Speed": "1/125",
+          ISO: "200"
+        }
+      },
+      {
+        title: "The Pot",
+        file: "ThePot.jpg",
+        category: "Objects",
+        src: "../Photography/PhotoPageAssets/img6.jpg",
+        alt: "The Pot",
+        description: "This was the pic captured during the golden hour from my balcony. The goal here was to emphasize the texture of the plastic pot. Note that this image has been processed in Darktable in which I gave some filmic grain and a slight green tint. I think it works nicely.",
+        settings: {
+          Camera: "Canon EOS 760D",
+          Aperture: "f/8.4",
+          "Shutter Speed": "1/60",
+          ISO: "400"
+        }
+      },
+      {
+        title: "Solar Flare",
+        file: "SolarFlare.jpg",
+        category: "Experiments",
+        src: "../Photography/PhotoPageAssets/img7.jpg",
+        alt: "Solar Flare",
+        description: "This shot almost looks like it was taken from space! However, what I did was to take a paper cup, taped it black, punched a small hole in the front, put my camera lens inside the other end, and pointed it towards the sun. Then i got those really awesome sun bloom due to the aperture shape, and some sick lens flares!",
+        settings: {
+          Camera: "Canon EOS 760D",
+          Aperture: "f/6",
+          "Shutter Speed": "1/30",
+          ISO: "400"
+        }
+      },
+      {
+        title: "Lens Magic",
+        file: "LensMagic.jpg",
+        category: "Objects",
+        src: "../Photography/PhotoPageAssets/1.jpg",
+        alt: "Lens Magic",
+        description: "This is a shot of a telephoto lens which is mountable for Canon R. Shined a nice white light to see the anti-glare reflective coating. Can also see various lens stages. I think this is an awesome shot depicting serious optical engineering.",
+        settings: {
+          Camera: "Realme Narzo 70 Pro (Phone)",
+          Aperture: "Auto",
+          "Shutter Speed": "Auto",
+          ISO: "Auto"
+        }
+      },
+      {
+        title: "Leafy Leafy",
+        file: "LeafyLeafy.jpg",
+        category: "Golden Hour",
+        src: "../Photography/PhotoPageAssets/img8.jpg",
+        alt: "Leafy Leafy",
+        description: "Took this shot during the golden hour when the sun is directly in front of the leaf. There was this nice hole through which the sunlight could pass. I was testing the dynamic range performance of my EOS 760D. The leaf veins are visible which makes them look so magical for some reason.",
+        settings: {
+          Camera: "Canon EOS 760D",
+          Aperture: "f/8.6",
+          "Shutter Speed": "1/40",
+          ISO: "100"
+        }
+      },
+      {
+        title: "Post Apocalypse",
+        file: "PostApocalypse.jpg",
+        category: "Experiments",
+        src: "../Photography/PhotoPageAssets/img9.jpg",
+        alt: "Post Apocalypse",
+        description: "This shot doesn't have any meaning, and is rather just for testing the performance of my EOS 760D. On an artistic side, this creates nice silhouette elements. Plus, it almost gives out some post-apocalyptic-cinematic feel.",
+        settings: {
+          Camera: "Canon EOS 760D",
+          Aperture: "f/10",
+          "Shutter Speed": "1/2500",
+          ISO: "100"
+        }
+      },
+      {
+        title: "White Magic",
+        file: "WhiteMagic.jpg",
+        category: "Macro Photography",
+        src: "../Photography/PhotoPageAssets/img10.jpg",
+        alt: "White Magic",
+        description: "Took this closeup shot of white jasmine (i think?) on side of a highway. Looks amazing, aint it? The most magical thing for me for this image is the background blur: they're so creamy and smooth! I personally think this is a wallpaper material.",
+        settings: {
+          Camera: "Canon EOS R",
+          Aperture: "f/5.6",
+          "Shutter Speed": "1/640",
+          ISO: "800"
+        }
+      },
+      {
+        title: "Yellow Magic",
+        file: "YellowMagic.jpg",
+        category: "Macro Photography",
+        src: "../Photography/PhotoPageAssets/img11.jpg",
+        alt: "Yellow Magic",
+        description: "I honestly don't know which flower is this, but I found it on the roadside. I think it looks so cool. The anther is clearly in clearly in focus and the blue sky behind looks so good with the yellow subject. The color composition is, according to me, working nicely. This looks like a pfp material haha.",
+        settings: {
+          Camera: "Canon EOS R",
+          Aperture: "f/5.6",
+          "Shutter Speed": "1/500",
+          ISO: "1600"
+        }
+      },
+      {
+        title: "Composition Shot 1",
+        file: "CompShot1.jpg",
+        category: "Golden Hour",
+        src: "../Photography/PhotoPageAssets/img12.jpg",
+        alt: "Composition Shot 1",
+        description: "I seriously again, do not know which plant is this (im bad with the names sadly). Captured during the golden hour and the direct sunshine on the plant, I think the composition here works pretty nicely. The two parts, the lens glare, the sun in the subject the other taller plant in the background blurred out, it gives that depth. Capturing this image was no easy task though. The constant non-uniform winds always resulted in messed up framing, so the shutter speed for this insanely high. Don't forget about the patience. It took 10 minutes to capture this lmao.",
+        settings: {
+          Camera: "Canon EOS R",
+          Aperture: "f/2.8",
+          "Shutter Speed": "1/5000",
+          ISO: "250"
+        }
+      },
+      {
+        title: "Composition Shot 2",
+        file: "CompShot2.jpg",
+        category: "Golden Hour",
+        src: "../Photography/PhotoPageAssets/img13.jpg",
+        alt: "Composition Shot 2",
+        description: "I do not the name of this plant. However, I think the framing and composition came out nicely. The huge spherical seed cluster at the center of the frame acts as a nice subject. The blue sky, the golden hour lighting on the plant, all of them work nicely together. Not to mention the nice out-of-focus blur and depth provided by the seed cluster at the back of the main one. Capturing this wasn't easy due to the high winds, so high shutter speed with and patience were must.",
+        settings: {
+          Camera: "Canon EOS R",
+          Aperture: "f/2.8",
+          "Shutter Speed": "1/1600",
+          ISO: "250"
+        }
+      },
+       {
+        title: "Golden Blackforest",
+        file: "GoldenBlackfrst.jpg",
+        category: "Golden Hour",
+        src: "../Photography/PhotoPageAssets/img14.jpg",
+        alt: "Golden Blackforest",
+        description: "Now, I seriously think this is a wallpaper material. The tree silhouette against the dark sky really does elevate the twilight aesthetic. The negative space allows the subject to exist and not fight the space. For some reason, looking at this image makes me calm.",
+        settings: {
+          Camera: "Canon EOS R",
+          Aperture: "f/7.1",
+          "Shutter Speed": "1/2500",
+          ISO: "1000"
+        }
+      },
+      {
+        title: "Magical Sunset",
+        file: "MagicalSunset.jpg",
+        category: "Golden Hour",
+        src: "../Photography/PhotoPageAssets/img15.jpg",
+        alt: "Magical Sunset",
+        description: "The negative space is the subject here. The silhouette trees and landscape acts as a reference. The gradient of the pre-monsoon sky was seriously beautiful. The camera actually captured nothing compared to the eyes. The dark blue-purple-orange shades literally look something out of a painting.",
+        settings: {
+          Camera: "Canon EOS R",
+          Aperture: "f/5.6",
+          "Shutter Speed": "1/640",
+          ISO: "2000"
+        }
+      },
+      
+
+    ];
+
+    const thumbnailGrid = document.getElementById("thumbnailGrid");
+    const windowTitle = document.getElementById("windowTitle");
+    const previewImage = document.getElementById("previewImage");
+    const previewTitle = document.getElementById("previewTitle");
+    const previewDescription = document.getElementById("previewDescription");
+    const settingsList = document.getElementById("settingsList");
+    const statusCount = document.getElementById("statusCount");
+    const statusSelected = document.getElementById("statusSelected");
+    const viewerOverlay = document.getElementById("viewerOverlay");
+    const viewerTitle = document.getElementById("viewerTitle");
+    const viewerImage = document.getElementById("viewerImage");
+    const openViewerButton = document.getElementById("openViewerButton");
+    const closeViewerButton = document.getElementById("closeViewerButton");
+    const folderButtons = document.querySelectorAll(".folder-item");
+
+    let selectedPhoto = photos[0];
+    let activeFilter = "All";
+
+    function getVisiblePhotos() {
+      return activeFilter === "All"
+        ? photos
+        : photos.filter((photo) => photo.category === activeFilter);
+    }
+
+    function renderThumbnails() {
+      const visiblePhotos = getVisiblePhotos();
+      thumbnailGrid.innerHTML = "";
+
+      visiblePhotos.forEach((photo) => {
+        const button = document.createElement("button");
+        button.className = "thumbnail-item";
+        button.type = "button";
+        button.setAttribute("aria-label", `Select ${photo.title}`);
+        button.dataset.file = photo.file;
+
+        if (photo.file === selectedPhoto.file) {
+          button.classList.add("selected");
+        }
+
+        button.innerHTML = `
+          <span class="thumbnail-image-wrap">
+            <img src="${photo.src}" alt="${photo.alt}">
+          </span>
+          <span class="thumbnail-title">${photo.file}</span>
+          <span class="thumbnail-meta">${photo.category}</span>
+        `;
+
+        button.addEventListener("click", () => selectPhoto(photo));
+        button.addEventListener("dblclick", openViewer);
+        thumbnailGrid.appendChild(button);
+      });
+
+      statusCount.textContent = `${visiblePhotos.length} object(s)`;
+    }
+
+    function renderSettings(settings) {
+      settingsList.innerHTML = "";
+      Object.entries(settings).forEach(([label, value]) => {
+        const item = document.createElement("li");
+        item.innerHTML = `<strong>${label}:</strong> ${value}`;
+        settingsList.appendChild(item);
+      });
+    }
+
+    function selectPhoto(photo) {
+      selectedPhoto = photo;
+      windowTitle.textContent = `C:\\Sudu\\Photos\\${photo.file}`;
+      previewImage.src = photo.src;
+      previewImage.alt = photo.alt;
+      previewTitle.textContent = photo.title;
+      previewDescription.textContent = photo.description;
+      statusSelected.textContent = `${photo.file} selected`;
+      renderSettings(photo.settings);
+
+      document.querySelectorAll(".thumbnail-item").forEach((item) => {
+        item.classList.toggle("selected", item.dataset.file === photo.file);
+      });
+    }
+
+    function openViewer() {
+      viewerTitle.textContent = `C:\\Sudu\\Photos\\${selectedPhoto.file}`;
+      viewerImage.src = selectedPhoto.src;
+      viewerImage.alt = selectedPhoto.alt;
+      viewerOverlay.hidden = false;
+      closeViewerButton.focus();
+    }
+
+    function closeViewer() {
+      viewerOverlay.hidden = true;
+      openViewerButton.focus();
+    }
+
+    folderButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        folderButtons.forEach((folderButton) => folderButton.classList.remove("active"));
+        button.classList.add("active");
+
+        const visiblePhotos = getVisiblePhotos();
+        if (!visiblePhotos.some((photo) => photo.file === selectedPhoto.file)) {
+          selectPhoto(visiblePhotos[0]);
+        }
+
+        renderThumbnails();
+      });
+    });
+
+    openViewerButton.addEventListener("click", openViewer);
+    closeViewerButton.addEventListener("click", closeViewer);
+    viewerOverlay.addEventListener("click", (event) => {
+      if (event.target === viewerOverlay) {
+        closeViewer();
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !viewerOverlay.hidden) {
+        closeViewer();
+      }
+    });
+
+    selectPhoto(selectedPhoto);
+    renderThumbnails();
+  </script>
 </body>
 </html>
