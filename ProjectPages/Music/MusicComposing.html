@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Composing - sudu</title>
+  <link rel="icon" type="image/x-icon" href="../../Assets/Images/stickman.jpg">
+  <link rel="stylesheet" href="Music.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">sudu</h1>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../projects.html" class="active">Projects</a></li>
+        <li><a href="../../about.html">About me</a></li>
+        <li><a href="../../contact.html">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="button-group-back">
+      <button type="button" onclick="window.location.href='../../projects.html'" aria-label="Back to projects">
+        <img src="../../Assets/Images/backicn.png" alt="" width="24" height="24">
+      </button>
+    </div>
+
+    <section class="projects-hero">
+      <img src="MusicPageAssets/music.png" alt="Music note icon" class="avatar" width="256" height="256">
+      <h2>Music Composing</h2>
+      <p>I'm no Arijit Singh, but I like experimenting in FL Studio. I love creating cinematic soundtracks and remixes that let me express myself using sound. Check out some of my compositions below!</p>
+    </section>
+
+    <section class="music-grid" aria-label="Music tracks">
+      
+      <article class="win95-window remix-window" data-track="1">
+        <div class="title-bar">
+          <span class="title-bar-text">C:\Sudu\Music\ShinnosukeThemeRemix.mp3</span>
+          <span class="title-bar-controls" aria-hidden="true">□</span>
+        </div>
+        <div class="window-body">
+          <div class="remix-heading">
+       
+            <h3 class="track-title">Shinnosuke Indian Theme</h3>
+          </div>
+          <div class="remix-comparison">
+            <section class="remix-version music-player">
+              <div class="version-label"><span class="original"></span> Original</div>
+              <h4 class="version-title">Original Shinnosuke Remix Theme</h4>
+              <div class="waveform-frame">
+                <canvas class="waveform" aria-label="Original audio waveform visualizer"></canvas>
+                <span class="waveform-progress" aria-hidden="true"></span>
+              </div>
+              <div class="time-row" aria-live="polite"><span class="current-time">0:00</span><span class="duration">0:00</span></div>
+              <div class="player-controls">
+                <button class="win95-button play-button" type="button" aria-label="Play original track"><span aria-hidden="true">▶</span> Play</button>
+                <button class="win95-button stop-button" type="button" aria-label="Stop original track"><span class="stop-icon" aria-hidden="true"></span> Stop</button>
+              </div>
+              
+              <audio preload="metadata"><source src="MusicPageAssets/basemus.mp3" type="audio/mpeg"></audio>
+            </section>
+            <section class="remix-version music-player">
+              <div class="version-label"><span class="remixed"></span> Remixed</div>
+              <h4 class="version-title">Shinnosuke Indian Theme Remix</h4>
+              <div class="waveform-frame">
+                <canvas class="waveform" aria-label="Remixed audio waveform visualizer"></canvas>
+                <span class="waveform-progress" aria-hidden="true"></span>
+              </div>
+              <div class="time-row" aria-live="polite"><span class="current-time">0:00</span><span class="duration">0:00</span></div>
+              <div class="player-controls">
+                <button class="win95-button play-button" type="button" aria-label="Play remixed track"><span aria-hidden="true">▶</span> Play</button>
+                <button class="win95-button stop-button" type="button" aria-label="Stop remixed track"><span class="stop-icon" aria-hidden="true"></span> Stop</button>
+              </div>
+            
+              <audio preload="metadata"><source src="MusicPageAssets/ShinchanRemix.mp3" type="audio/mpeg"></audio>
+            </section>
+          </div>
+          <p class="track-description remix-description">When I listened to the Indian-remix version of the classic "Orawa Ninkimono" song, I, of course, liked it, but I felt something was missing lol. I noticed that they used Sitar for few parts. So for remixing, I reverse-engineered the notes and added it more accross the entire track. It was tedious, but was fun. Next, to make it more punchy and "dancey", I added drums and few sound fx in the beginning. This was a random sunday project and now when i listen to it, it feels cringe. But hey, this was my best shot lol. </p>
+        </div>
+      </article>
+
+      <article class="win95-window music-player" data-track="2">
+        <div class="title-bar">
+          <span class="title-bar-text">C:\Sudu\Music\DreamGamesTheme</span>
+          <span class="title-bar-controls" aria-hidden="true">□</span>
+        </div>
+        <div class="window-body">
+          <div class="now-playing">
+            <h3 class="track-title">DreamGames Studio Theme</h3>
+          </div>
+          <div class="waveform-frame">
+            <canvas class="waveform" aria-label="Audio waveform visualizer"></canvas>
+            <span class="waveform-progress" aria-hidden="true"></span>
+          </div>
+          <div class="time-row" aria-live="polite"><span class="current-time">0:00</span><span class="duration">0:00</span></div>
+          <p class="track-description">THis is a short soundtrack i made for DreamGames Studio when I worked there. As the name "DreamGames" suggest, it relates to dream. Hence, I made that dreamy theme with a soft lullaby. I also added some chords to give it a lead. Also added sparkles to give it sparkle and contribute more to that "dreamy" theme.</p>
+          <div class="player-controls">
+            <button class="win95-button play-button" type="button" aria-label="Play track"><span aria-hidden="true">▶</span> Play</button>
+            <button class="win95-button stop-button" type="button" aria-label="Stop track"><span class="stop-icon" aria-hidden="true"></span> Stop</button>
+          </div>
+          <audio preload="metadata"><source src="MusicPageAssets/DreamGamesIntro.mp3" type="audio/mpeg"></audio>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script>
+    const formatTime = (seconds) => {
+      if (!Number.isFinite(seconds)) return '0:00';
+      const minutes = Math.floor(seconds / 60);
+      return `${minutes}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
+    };
+
+    document.querySelectorAll('.music-player').forEach((player) => {
+      const audio = player.querySelector('audio');
+      const playButton = player.querySelector('.play-button');
+      const stopButton = player.querySelector('.stop-button');
+      const currentTime = player.querySelector('.current-time');
+      const duration = player.querySelector('.duration');
+      const progress = player.querySelector('.waveform-progress');
+      const canvas = player.querySelector('.waveform');
+      const context = canvas.getContext('2d');
+      let audioContext;
+      let analyser;
+      let samples;
+      let animationFrame;
+
+      const prepareCanvas = () => {
+        const width = canvas.clientWidth || 480;
+        const height = canvas.clientHeight || 88;
+        const scale = window.devicePixelRatio || 1;
+        canvas.width = width * scale;
+        canvas.height = height * scale;
+        context.setTransform(scale, 0, 0, scale, 0, 0);
+        return { width, height };
+      };
+
+      const drawWaveform = () => {
+        const { width, height } = prepareCanvas();
+        context.fillStyle = '#000';
+        context.fillRect(0, 0, width, height);
+        context.strokeStyle = '#35e75a';
+        context.lineWidth = 3;
+        context.beginPath();
+
+        if (analyser && !audio.paused) {
+          analyser.getByteTimeDomainData(samples);
+          const sliceWidth = width / (samples.length - 1);
+          samples.forEach((sample, index) => {
+            const x = index * sliceWidth;
+            const y = (sample / 255) * height;
+            index === 0 ? context.moveTo(x, y) : context.lineTo(x, y);
+          });
+        } else {
+          context.moveTo(0, height / 2);
+          context.lineTo(width, height / 2);
+        }
+        context.stroke();
+      };
+
+      const animateWaveform = () => {
+        drawWaveform();
+        if (!audio.paused) animationFrame = requestAnimationFrame(animateWaveform);
+      };
+
+      const connectAudio = () => {
+        if (analyser) return;
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const source = audioContext.createMediaElementSource(audio);
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 2048;
+        samples = new Uint8Array(analyser.fftSize);
+        source.connect(analyser);
+        analyser.connect(audioContext.destination);
+      };
+
+      drawWaveform();
+      window.addEventListener('resize', drawWaveform);
+
+      playButton.addEventListener('click', () => {
+        if (!audio.currentSrc) return;
+        connectAudio();
+        audioContext.resume();
+        document.querySelectorAll('.music-player audio').forEach((otherAudio) => {
+          if (otherAudio !== audio) otherAudio.pause();
+        });
+        audio.paused ? audio.play() : audio.pause();
+      });
+
+      stopButton.addEventListener('click', () => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+
+      audio.addEventListener('play', () => {
+        playButton.innerHTML = '<span aria-hidden="true">Ⅱ</span> Pause';
+        playButton.setAttribute('aria-label', 'Pause track');
+        player.classList.add('is-playing');
+        cancelAnimationFrame(animationFrame);
+        animateWaveform();
+      });
+      audio.addEventListener('pause', () => {
+        playButton.innerHTML = '<span aria-hidden="true">▶</span> Play';
+        playButton.setAttribute('aria-label', 'Play track');
+        player.classList.remove('is-playing');
+        cancelAnimationFrame(animationFrame);
+        drawWaveform();
+      });
+      audio.addEventListener('loadedmetadata', () => { duration.textContent = formatTime(audio.duration); });
+      audio.addEventListener('timeupdate', () => {
+        currentTime.textContent = formatTime(audio.currentTime);
+        const percent = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+        progress.style.width = `${percent}%`;
+      });
+      audio.addEventListener('ended', () => { audio.currentTime = 0; });
+    });
+  </script>
+</body>
+</html>
